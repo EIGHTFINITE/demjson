@@ -5191,7 +5191,7 @@ class JSON(object):
             self.encode_composite( obj, state )
 
 
-    def encode_enum(self, val, state):
+    def encode_enum(self, obj, state):
         """Encode a Python Enum value into JSON."""
         eas = self.options.encode_enum_as
         if eas == 'qname':
