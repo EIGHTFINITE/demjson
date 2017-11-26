@@ -2534,7 +2534,7 @@ class decode_state(object):
                 st.max_codepoint = max( st.max_codepoint, maxcp )
             if maxcp > 0xffff and not self._have_warned_nonbmp:
                 self._have_warned_nonbmp = True
-                self.push_cond( self.options.non_portable,
+                self.push_cond( self.options.non_bmp,
                                 "Strings containing non-BMP characters (U+%04X) may not be portable" % maxcp,
                                 **kwargs )
 
@@ -2872,6 +2872,8 @@ class json_options(object):
              "A JSON document may start with a Unicode BOM (Byte Order Mark)"),
         ("non_portable",
              "Anything technically valid but likely to cause data portablibity issues"),
+        ("non_bmp",
+             "Characters out of the BMP may cause portability issues"),
         ) # end behavior list
 
     def reset_to_defaults(self):
@@ -3339,6 +3341,7 @@ class json_options(object):
             self.warn_zero_byte()
             self.warn_bom()
             self.warn_non_portable()
+            self.warn_non_bmp()
         elif strict == STRICTNESS_TOLERANT or strict is False:
             self._strictness = STRICTNESS_TOLERANT
             self.set_all_allow()
@@ -3348,6 +3351,7 @@ class json_options(object):
             self.leading_zero_radix = 8
             self.warn_bom()
             self.allow_non_portable()
+            self.allow_non_bmp()
         else:
             raise ValueError("Unknown strictness options %r" % strict)
         self.allow_any_type_at_start()

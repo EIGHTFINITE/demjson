@@ -1922,6 +1922,9 @@ CLASSES
      |  
      |  allow_non_portable(self, _name='non_portable', _value='allow')
      |      Set behavior non_portable to allow.
+     |
+     |  allow_non_bmp(self, _name='non_bmp', _value='allow')
+     |      Set behavior non_bmp to allow.
      |  
      |  allow_nonescape_characters(self, _name='nonescape_characters', _value='allow')
      |      Set behavior nonescape_characters to allow.
@@ -2008,6 +2011,9 @@ CLASSES
      |  forbid_non_portable(self, _name='non_portable', _value='forbid')
      |      Set behavior non_portable to forbid.
      |  
+     |  forbid_non_bmp(self, _name='non_bmp', _value='forbid')
+     |      Set behavior non_bmp to forbid.
+     |
      |  forbid_nonescape_characters(self, _name='nonescape_characters', _value='forbid')
      |      Set behavior nonescape_characters to forbid.
      |  
@@ -2143,6 +2149,9 @@ CLASSES
      |  warn_non_portable(self, _name='non_portable', _value='warn')
      |      Set behavior non_portable to warn.
      |  
+     |  warn_non_bmp(self, _name='non_bmp', _value='warn')
+     |      Set behavior non_bmp to warn.
+     |
      |  warn_nonescape_characters(self, _name='nonescape_characters', _value='warn')
      |      Set behavior nonescape_characters to warn.
      |  
