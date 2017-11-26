@@ -117,6 +117,7 @@ forbid  js-string-escapes         All JavaScript character \-escape sequences ma
 forbid  leading-zeros             Numbers may have extra leading zeros (see --leading-zero-radix option)
 forbid  non-numbers               Non-numbers may be used, such as NaN or Infinity
 warn    non-portable              Anything technically valid but likely to cause data portablibity issues
+warn    non-bmp                   Unescaped non-BMP characters
 forbid  nonescape-characters      Unknown character \-escape sequences stand for that character (\Q -> 'Q')
 forbid  nonstring-keys            Value types other than strings (or identifiers) may be used as object keys
 forbid  octal-numbers             New-style octal numbers, e.g., 0o731  (see leading-zeros for legacy octals)
