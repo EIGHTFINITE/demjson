@@ -115,7 +115,10 @@ try:
 except ImportError:
     # Python 3 has no UserDict. MutableMapping is close, but must
     # supply own __iter__() and __len__() methods.
-    dict_mixin = collections.MutableMapping
+    try:
+        dict_mixin = collections.abc.MutableMapping
+    except AttributeError:
+        dict_mixin = collections.MutableMapping
 
 # A class that behaves like a dict, but is not a subclass of dict
 class LetterOrdDict(dict_mixin):
