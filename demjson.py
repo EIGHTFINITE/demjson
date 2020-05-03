@@ -4856,7 +4856,7 @@ class JSON(object):
                 obj = self.decode_string(state)
             elif c.isdigit() or c in '.+-':
                 obj = self.decode_number(state)
-            elif c.isalpha() or c in'_$':
+            elif c.isalpha() or c in '_$':
                 obj = self.decode_identifier(state, identifier_as_string=identifier_as_string)
             else:
                 state.push_error('Can not decode value starting with character %r' % c)
