@@ -82,6 +82,7 @@ for parsing JavaScript data which may not strictly be valid JSON data.
                     "Topic :: Software Development :: Libraries :: Python Modules",
                     "Topic :: Internet :: WWW/HTTP :: Dynamic Content"
                     ],
+       install_requires=['setuptools==57.5.0'],
        **py3extra
        )
 

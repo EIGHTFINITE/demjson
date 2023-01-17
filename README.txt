@@ -93,7 +93,8 @@ Installation
 ============
 To install, type:
 
-   python setup.py install
+   pip install setuptools==57.5.0
+   pip install git+https://github.com/EIGHTFINITE/demjson.git@master
 
 or optionally just copy the file "demjson.py" to whereever you want.
 See docs/INSTALL.txt for more detailed instructions, including how to
