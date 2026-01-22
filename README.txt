@@ -94,7 +94,7 @@ Installation
 To install, type:
 
    curl -sSo pip-25.2.pyz https://bootstrap.pypa.io/pip/zipapp/pip-25.2.pyz
-   python3.11 pip-25.2.pyz install setuptools==57.5.0 wheel
+   python3.11 pip-25.2.pyz install setuptools==57.5.0 wheel==0.45.1
    python3.11 pip-25.2.pyz install git+https://github.com/EIGHTFINITE/demjson.git@master
 
 or optionally just copy the file "demjson.py" to whereever you want.
